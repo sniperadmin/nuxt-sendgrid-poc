@@ -64,7 +64,9 @@ export default {
   }),
   methods: {
     send () {
-      this.$axios.get('http://localhost:8080/nest')
+      this.$axios.get('http://localhost:5000/nest')
+        .then(() => { console.log('done!') })
+        .catch((err) => { console.log(err.message) })
     }
   }
 }

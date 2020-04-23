@@ -49,7 +49,7 @@
 <script>
 // import Logo from '~/components/Logo.vue'
 // import VuetifyLogo from '~/components/VuetifyLogo.vue'
-import sendEmail from '../send-grid'
+// import sendEmail from '../send-grid'
 import SbCard from '@/components/Card'
 
 export default {
@@ -64,7 +64,7 @@ export default {
   }),
   methods: {
     send () {
-      sendEmail()
+      this.$axios.get('/nest')
     }
   }
 }

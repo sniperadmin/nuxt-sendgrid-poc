@@ -17,6 +17,7 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@sendgrid/client": "^7.0.1",
     "@sendgrid/mail": "^7.0.1",
+    "cors": "^2.8.5",
     "fs": "0.0.1-security",
     "nuxt": "^2.0.0"
   },

@@ -1,17 +1,25 @@
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+
+const app = express()
+
+app.use(cors())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
 const sgMail = require('@sendgrid/mail')
 // const client = require('@sendgrid/client')
 
-export default function sendEmail () {
-  // client.setApiKey(process.env.SENDGRID_API_KEY)
-  // const request = {
-  //   method: 'GET',
-  //   url: '/v3/api_keys'
-  // }
-  // client.request(request)
-  //   .then(([response, body]) => {
-  //     console.log(response.statusCode)
-  //     console.log(body)
-  //   })
+app.get('/nest', sendEmail)
+
+function sendEmail (req, res, next) {
+  const headers = {
+    Accept: '*/*',
+    'Content-Type': 'application/json'
+  }
+  res.writeHead(200, headers)
+  // const content = req.body
 
   sgMail.setApiKey('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')
   const msg = {
@@ -33,3 +41,5 @@ export default function sendEmail () {
     }
   })()
 }
+
+app.listen(8000, () => console.log(`Swamp Events service listening on port ${8000}`))

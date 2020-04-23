@@ -4,7 +4,7 @@ const cors = require('cors')
 
 const dotenv = require('dotenv')
 
-const config = dotenv.config({ path: './sendGrid' })
+const config = dotenv.config()
 
 if (config.error) {
   console.log('Could not load env file', config.error)

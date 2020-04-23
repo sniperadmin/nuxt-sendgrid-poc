@@ -64,7 +64,7 @@ export default {
   }),
   methods: {
     send () {
-      this.$axios.get('/nest')
+      this.$axios.get('http://localhost:8080/nest')
     }
   }
 }

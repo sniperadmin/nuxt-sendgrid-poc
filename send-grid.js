@@ -42,4 +42,4 @@ function sendEmail (req, res, next) {
   })()
 }
 
-app.listen(8000, () => console.log(`Swamp Events service listening on port ${8000}`))
+app.listen(8080, () => console.log(`Swamp Events service listening on port ${8080}`))

@@ -20,7 +20,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
-    "nuxt": "^2.0.0"
+    "nuxt": "^3.4.3"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",
